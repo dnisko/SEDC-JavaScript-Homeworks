@@ -1,7 +1,7 @@
 // Additional notes:
 
 // For some of the solutions you will have to look for the relevant formula
-// Make sure to declare and name the variables properly using relevant keyword (let/const) and give proper names to the variables
+// Make sure to declare and name the variables properly using relevant keywords (let/const) and give proper names to the variables
 // Try to write the code more readable and descriptive
 
 
@@ -28,7 +28,7 @@ console.log("There are", resultProgram2, "seconds in", minutes, "minutes.");
 
 
 
-//3. Write a JavaScript program that takes a number and increments the number by +1 and prints the result in the console.
+//3. Write a JavaScript program that takes a number increments the number by +1 and prints the result in the console.
 //                      Program3
 let incrementingNumber = 1;
 incrementingNumber++;
@@ -47,7 +47,7 @@ console.log("The area of a triangle with base:", triangleBase, "and height:", tr
 
 
 
-//5. Write a JavaScript program that takes length and width of a rectangle and finds its perimeter. Print the result in the console.
+//5. Write a JavaScript program that takes the length and width of a rectangle and finds its perimeter. Print the result in the console.
 //                      Program5
 let rectangleWidth = 5;
 let rectangleHeight = 7;
@@ -56,7 +56,7 @@ let rectanglePerimeter = 2 * (rectangleWidth + rectangleHeight);
 console.log("The perimeter of a rectangle with width:", rectangleWidth, "and height:", rectangleHeight, "is:", rectanglePerimeter);
 
 
-//6. Write a JavaScript program that will calculate area of circle. Print the result in the console
+//6. Write a JavaScript program that will calculate the area of a circle. Print the result in the console
 //                      Program6
 const pi = 3.14;
 let circleRadius = 3;
