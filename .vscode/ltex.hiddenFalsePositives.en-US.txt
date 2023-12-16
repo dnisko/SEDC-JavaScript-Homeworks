@@ -1,0 +1,2 @@
+{"rule":"TR","sentence":"^\\QHomework6 </head> <body> <div id=\"main\"> </div> <div> <table> <tr> row 1 <td>cell 1</td> <td>cell 2</td> </tr> <tr> row2 <td>cell 3</td> <td>cell 4</td> </tr> </table> </div> <script src=\"script.js\"></script> </body> </html>\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QHomework6 </head> <body> <div id=\"main\"> </div> <div> <table> <tr> row 1 <td>cell 1</td> <td>cell 2</td> </tr> <tr> row2 <td>cell 3</td> <td>cell 4</td> </tr> </table> </div> <script src=\"script.js\"></script> </body> </html>\\E$"}
