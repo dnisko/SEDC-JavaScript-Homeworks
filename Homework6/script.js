@@ -15,21 +15,22 @@ function addTable(rows, columns)
     else
     {    
         let mainDiv = document.getElementById("main");
-        let tbl = document.createElement('table');
+        let createTable = document.createElement("table");
         
         for (let i = 0; i < rows; i++)
         {
-            const tr = tbl.insertRow();
+            const tr = createTable.insertRow();
             
             for(let j = 0; j < columns; j++)
             {
                 const td = tr.insertCell();
                 td.textContent = `Row-${i + 1} Cell-${j + 1}`;
+                //i & j +1 to start showing from 1, not 0
             }            
         }
-        tbl.setAttribute("border", "1");
-        // tbl.style.border = "1px solid black";
-        tbl.style.fontSize = "20px";
-        mainDiv.appendChild(tbl);
+        createTable.setAttribute("border", "1"); //this way adds border to whole table
+        // createTable.style.border = "1px solid black"; //this way adds border only on the edges
+        createTable.style.fontSize = "20px";
+        mainDiv.appendChild(createTable);
     }
 }
