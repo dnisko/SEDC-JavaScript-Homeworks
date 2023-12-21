@@ -82,11 +82,98 @@
         </div>
         <div id="partThree">
             <h3>Part 3</h3>
-            asdasdasd
+            <table>
+                <tr>
+                    <td>
+                        <label for="txtBookTitle">Book title: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtBookTitle">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="txtBookAuthor">Book author: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="txtBookAuthor">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Did you read it: </label>
+                    </td>
+                    <td>
+                        <input type="radio" id="read" name="read" value="yes">
+
+                        <label for="yes">Yes</label>
+                        <br>
+                        <input type="radio" id="notRead" name="read" value="no">
+                        <label for="no">No</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <input type="button" id="btnAddBook" value="Add to the book Object">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="bookResult"></p>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div id="partFour">
             <h3>Part 4</h3>
-            asdasdasd
+            <table>
+                <tr>
+                    <td>
+                        <label for="userFirstName">User First Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="userFirstName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userLastName">User Last Name: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="userLastName">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userEmal">User email: </label>
+                    </td>
+                    <td>
+                        <input type="email" id="userEmal">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="userPassword">User password: </label>
+                    </td>
+                    <td>
+                        <input type="password" id="userPassword">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <input type="button" id="btnSubmit" value="Submit">
+                    </td>
+                    <td style="text-align: right;">
+                        <input type="button" id="btnListUsers" value="Show all users">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="hiddenList">Users in the object:</p>
+                        <p id="listUsers"></p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <script src="script.js"></script>

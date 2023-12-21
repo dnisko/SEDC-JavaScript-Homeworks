@@ -1,13 +1,16 @@
+// ---------- Part 1 ----------
+
 let studentArray = [];
 
 let btnCreate = document.getElementById("btnCreateObject");
 let div = document.getElementById("result"); //selecting the div with id="result"
 
 // ---------- If we want to add every object in the same <ul> ----------
-//let list = document.createElement("ul"); //creating new HTML element <ul>
-//div.appendChild(list); //adding the created <ul> element inside the div id="result"
+let list = document.createElement("ul"); //creating new HTML element <ul>
+div.appendChild(list); //adding the created <ul> element inside the div id="result"
 
 
+// ---------- Part 2 ----------
 btnCreate.addEventListener("click", function()
 {
     let firstName = document.getElementById("txtFirstName").value;
@@ -77,4 +80,97 @@ btnCreateAnimal.addEventListener("click", function()
         }
     };
     animal.speak();
+});
+
+
+// ---------- Part 3 ----------
+
+let btnCreateBook = document.getElementById("btnAddBook");
+btnCreateBook.addEventListener("click", function ()
+{
+    let bookTitle = document.getElementById("txtBookTitle").value;
+    let bookAuthor = document.getElementById("txtBookAuthor").value;
+    let isRead = false;
+
+    if(document.getElementById("read").checked === true)
+    {
+        isRead = true;
+    }
+
+    let book = 
+    {
+        title: bookTitle,
+        author: bookAuthor,
+        read: isRead,
+    
+        getInfo: function()
+        {
+            if(this.read === false)
+            {
+                return document.getElementById("bookResult").innerText += `You still need to read \`${this.title}\` by ${this.author}.\n`;
+            }
+            else
+            {
+                return document.getElementById("bookResult").innerText += `You have already read \`${this.title}\` by ${this.author}.\n`;
+            }
+        }
+    };
+    book.getInfo();
+});
+
+
+
+// ---------- Part 4 ----------
+
+let usersArray = [];
+document.getElementById("hiddenList").style.visibility = "hidden";
+function UserCredentials(firstName, lastName, email, password)
+{
+    this.name = firstName,
+    this.lastname = lastName,
+    this.mail = email,
+    this.pass = password,
+
+    this.addToArray = function()
+    {
+        return `User Name: ${this.firstName}, User Lastname: ${this.lastName}`;
+    }
+}
+
+let btnUsersClicked = document.getElementById("btnSubmit");
+btnUsersClicked.addEventListener("click", function()
+{
+    let firstName = document.getElementById("userFirstName").value;
+    let lastName = document.getElementById("userLastName").value;
+    let email = document.getElementById("userEmal").value;
+    let password = document.getElementById("userPassword").value;
+    
+    let users = new UserCredentials(firstName, lastName, email, password);
+    usersArray.push(users);
+
+    console.log(usersArray);
+    return alert("Successfully registered.");
+    
+});
+
+let btnListUsers = document.getElementById("btnListUsers");
+btnListUsers.addEventListener("click", function()
+{
+    let listUsers = document.getElementById("listUsers");
+    if(usersArray.length === 0)
+    {
+        listUsers.innerText = "No users in the object.";
+    }
+    else
+    {
+        document.getElementById("hiddenList").style.visibility = "visible";
+        listUsers.innerText = "";
+        // console.log(usersArray);
+        
+        for(let i = 0; i < usersArray.length; i++)
+        {
+            listUsers.innerText += `Name: ${usersArray[i]["name"]}\nLastname: ${usersArray[i]["lastname"]}\n`;
+            // console.log(`Name: ${usersArray[i]["name"]}\nLastname: ${usersArray[i]["lastname"]}\n`);
+        }
+    }
 });
