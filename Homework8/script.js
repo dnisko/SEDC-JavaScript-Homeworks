@@ -53,9 +53,11 @@ function PrintExcercises(inputObject, numOfProps)
     console.log(numOfProps);
     console.log(values.length);
     // 2nd part of homework
+    //2 Try to make validation in the function that will handle errors if we put more exercises for showing and we don't have that much in our object, we want an alert to be shown for it that will print "too many exercises, give the students some time to learn!!". The same can be for negative numbers as well as for strings.
+
     if(isNaN(numOfProps))
     {
-      container.innerHTML = `<p>Enter a number to select an exercise.</p>`;
+      container.innerHTML = `<p>Enter a numberdd to select an exercise.</p>`;
     }
     else if(numOfProps < 0 || numOfProps > values.length)
     {
@@ -65,9 +67,11 @@ function PrintExcercises(inputObject, numOfProps)
     {
       for (let i = 0; i < Math.min(numOfProps, values.length); i++)
       {
+        //3. Add some dynamic style to our elements, but do it in JS!
           console.log(values[i]);
-          container.innerHTML += `<p> Vezba ${i + 1}: ${values[i]}</p>`
-          container.innerHTML += `---------------------------------------------------`
+          container.innerHTML += `<p id="paragraph${i}"> Vezba ${i + 1}: ${values[i]}</p>`;
+          container.innerHTML += `---------------------------------------------------`;
+          document.getElementById(`paragraph${i}`).style.backgroundColor = "grey";
       }
     }
 };
@@ -121,14 +125,27 @@ submitSelectedButton.addEventListener("click", function ()
   selectExcercise.value = "";
 });
 
-//2 Try to make validation in the function that will handle errors if we put more exercises for showing and we don't have that much in our object, we want an alert to be shown for it that will print "too many exercises, give the students some time to learn!!". The same can be for negative numbers as well as for strings.
-
-//3. Add some dynamic style to our elements, but do it in JS!
-
 //-----------------FOR THE BOLDEST!----------------
-
 //4. Try to Change the theme of the main view so the background is black and the text is white - Do this via a button and if you click the button, the theme should reset and be in its original white screen and black text color.
 
-// Remember to NOOOOOOOOOOTTTT use Google or something similar, think for yourself, and see references from our previous material and presentations!!!
+let btnTeheme = document.getElementById("btnTheme");
+let theme = "light";
+btnTeheme.value = "Dark Mode";
 
-//HAPPY CODING!!!!!!!!!!!!
+btnTeheme.addEventListener("click", function()
+{
+  if(theme === "light")
+  {
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+    theme = "dark";
+    btnTeheme.value = "Light Mode";
+  }
+  else if(theme === "dark")
+  {
+    document.body.style.background = "white";
+    document.body.style.color = "black";
+    theme = "light";
+    btnTeheme.value = "Dark Mode";
+  }
+});
