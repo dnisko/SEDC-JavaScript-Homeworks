@@ -1,0 +1,48 @@
+.grid-container {
+    display: grid;
+    width: 500px;
+    height: 500px;
+}
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+}
+
+.grid-item > .orange
+{
+    background-color: orange;
+}
+
+.txt
+{
+    background: black;
+    color: white;
+    text-align: right;
+    /* pointer-events: none; */
+}
+.itemFullWidth
+{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    
+}
+.itemWidth1
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.itemWidth2
+{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+input
+{ 
+    width: 100%; 
+    height: 100%;
+    border: none;
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+} 
