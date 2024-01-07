@@ -1,0 +1,63 @@
+
+body
+{
+    background-color: #c2d709;
+    color: white;
+    text-align: center;
+    /* justify-content: center; */
+}
+
+#container
+{
+    display: grid;
+
+}
+.container-item
+{
+    margin-inline-start: 5%;
+    margin-inline-end: 5%;
+    place-items: center;
+}
+
+#middle
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));;
+
+    gap: 10px;
+}
+
+.btn-outline-primary
+{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    margin-left: 50px;
+}
+
+#picture
+{
+    /* I DON'T KNOW WHY IT WON'T GET CENTERED WITH FIXED WIDTH..... */
+    height: 400px;
+    /* width: 400px; */
+    border: dashed white;
+}
+#picture > img
+{
+    text-align: center;
+    justify-self: center;
+    height: 350px;
+    width: 350px;
+}
+/* #middleItem
+{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    text-align: center;
+    font-size: 70px;
+} */
+
+/* @import url(test.css); */
