@@ -1,4 +1,3 @@
-
 body
 {
     background-color: #c2d709;
@@ -24,7 +23,6 @@ body
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));;
-
     gap: 10px;
 }
 
@@ -51,17 +49,79 @@ body
     /* width: 400px; */
     border: dashed white;
 }
-#picture > img
-{
-    text-align: center;
-    justify-self: center;
-    height: 350px;
-    width: 350px;
-}
 
 .select
 {
     width: fit-content;
+}
+
+.picture-container
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    grid-auto-columns: max-content;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+}
+.picture-container-item
+{
+    text-align: center;
+    justify-self: center;
+    width: 50px;
+    height: 50px;
+}
+.picture-container > .item1
+{
+    grid-area:  2 / 2 / 3 / 5;
+    
+}
+.picture-container > .item2
+{
+    grid-area: 3 / 3 / 4 / 4;
+    top: 0px;
+}
+.picture-container > .item3
+{
+    grid-area:  3 / 2 / 4 / 3;
+}
+.picture-container > .item4
+{
+    grid-area: 3 / 4 / 4 / 5;
+}
+.picture-container > .item5
+{
+    grid-area: 4 / 2 / 5 / 4;
+}
+
+
+.container-legs
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    /* grid-auto-rows: max-content;
+    grid-auto-columns: max-content; */
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.legs-item
+{
+    text-align: center;
+    justify-self: center;
+    width: 50px;
+    height: 50px;
+}
+
+.legs-item > .leg1
+{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.legs-item > .leg2
+{
+    grid-area: 1 / 2 / 2 / 3;
 }
 /* #middleItem
 {
