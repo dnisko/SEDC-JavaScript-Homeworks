@@ -9,67 +9,47 @@
 <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
     <div id="container">
 
         <div id="top" class="container-item">
             <h1>HANGMAN</h1>
             <h2>VANILLA JAVASCRIPT HANGMAN GAME</h2>
             <h2>Use the alphabet below to guess the word, or click hint to get a clue.</h2>
+            <div class="left">
+            <label for="chooseCategory">Choose category:</label>
+                <select class="form-select form-select-sm select" aria-label="Small select example" name="category" id="chooseCategory"></select>
+            </div>
             <br><br>
         </div>
 
 
         <div id="middle" class="container-item">
-            <script src="makeButtons.js">
+            <script src="makeButtons.js"></script>
+        </div>
 
-            </script>        
-                <!-- <button type="button" id="btnA" class="btn btn-light middleItem">a</button>
-                <button type="button" id="btnA" class="btn btn-light middleItem">b</button>
-                <button type="button" id="btnA" class="btn btn-light middleItem">c</button>
-                <button type="button" id="btnA" class="btn btn-light middleItem">d</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">e</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">f</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">g</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">h</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">i</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">j</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">k</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">l</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">m</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">n</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">o</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">p</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">q</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">r</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">s</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">t</button>            
-                <button type="button" id="btnA" class="btn btn-light middleItem">u</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">v</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">w</button>        
-                <button type="button" id="btnA" class="btn btn-light middleItem">x</button>            
-                <button type="button" id="btnA" class="btn btn-light middleItem">y</button>            
-                <button type="button" id="btnA" class="btn btn-light middleItem">z</button>         -->
-            
+        <div id="leftDiv" class="left">
+            <br><br>
+            <h3>Used letters: 
+                <p id="usedLetters"></p>
+            </h3>
         </div>
         
-
         <div id="middle1" class="container-item">
             <br>
             <br>
             <br>
             <div>
+                <h2 id="category"></h2>
+                <p id="word"></p>
+                <br>
+                <h2>You have <p id="lives"></p> lives</h2>
+                <br>
                 
-                <h2 id="category">The chosen category is </h2>
-                <p id="word">_ _ _ _ _ _ - _ _ _ _</p>
-                <br>
-                <h2 id="lives">You have __ lives</h2>
-                <br>
                 <h2 id="clue">Clue - </h2>
+                <h1 id="result"></h1>
             </div>
             <br>
         </div>
-
 
         <div id="bottom" class="container-item">
             
@@ -79,8 +59,8 @@
             <br>
 
             <div id="bottomButtons">
-                <button type="button" class="btn btn-outline-primary">Clue</button>
-                <button type="button" class="btn btn-outline-primary">Restart</button>
+                <button id="btnClue" type="button" class="btn btn-outline-primary">Clue</button>
+                <button id="btnRestart" type="button" class="btn btn-outline-primary">Restart</button>
             </div>
         </div>
 

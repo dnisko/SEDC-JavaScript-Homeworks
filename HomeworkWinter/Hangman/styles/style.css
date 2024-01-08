@@ -38,6 +38,12 @@ body
     margin-left: 50px;
 }
 
+.left
+{
+    justify-content: left;
+    text-align: left;
+    margin-left: 10px;
+}
 #picture
 {
     /* I DON'T KNOW WHY IT WON'T GET CENTERED WITH FIXED WIDTH..... */
@@ -51,6 +57,11 @@ body
     justify-self: center;
     height: 350px;
     width: 350px;
+}
+
+.select
+{
+    width: fit-content;
 }
 /* #middleItem
 {
